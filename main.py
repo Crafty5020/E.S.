@@ -1,18 +1,20 @@
 #imports
 from time import sleep
-import modules.studytime as st
 
+#Modules
+import modules.studytime as st
+import modules.quizzie as q
 
 
 def start():
 	#Asks user what app they wan't to use any of the modules or close the app
 	while True:
 		try:
-			selec = int(input("Input 0 to close app, 1 for study time anylizer: "))
+			selec = int(input("Input 0 to close app, 2 for study time anylizer: "))
 			#Checks if what user inputed is in range
-			if selec < 0 or selec > 1:
+			if selec < 0 or selec > 2:
 				print("___________________________________________________________")
-				print("ERROR: value must be in the range from 0 to 1")
+				print("ERROR: value must be in the range from 0 to 2")
 				print("___________________________________________________________")
 				continue
 			break
@@ -25,18 +27,8 @@ def start():
 		close()
 	elif selec == 1:
 		st.study()
-
-#Starts the app	
-def starter():
-	print("___________________________________________________________")
-	print("Hello and welcome to Estudy Surfing version Stage 0.1")
-	sleep(1)
-	print("-----------------------------------------------------------")
-	start()
-
-#Checks if whe started the proggram and not using the imports
-if __name__ == "__main__":
-	starter()
+	elif selec == 2:
+		q.quiz()
 
 #Closes the app
 def close():
@@ -44,4 +36,4 @@ def close():
 	print("Ill see you later!")
 	print("___________________________________________________________")
 	sleep(0.5)
-	close()
+	exit()

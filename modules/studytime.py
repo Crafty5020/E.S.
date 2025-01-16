@@ -4,6 +4,10 @@ import main
 
 #Main function
 def study():
+	print("___________________________________________________________")
+	print("Starting Study Time Analyzer...")
+	sleep(1)
+	print("-----------------------------------------------------------")
 	#In a loop to make reusability
 	while True:
 		#Resets variables for reusability

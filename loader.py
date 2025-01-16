@@ -1,6 +1,7 @@
 #Imports
+import main
 from time import sleep
-from main import start
+
 
 #Starts the app
 def starter():
@@ -8,8 +9,8 @@ def starter():
 	print("Hello and welcome to Estudy Surfing version Stage 0.2")
 	sleep(1)
 	print("-----------------------------------------------------------")
-	start()
+	main.start()
 
 #Checks if whe started the proggram and not using the imports
-if __name__ == "__Loader__":
+if __name__ == "__main__":
 	starter()

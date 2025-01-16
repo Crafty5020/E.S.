@@ -1,6 +1,6 @@
 #Imports
 from time import sleep
-import main
+
 
 #Main function
 def study():
@@ -57,6 +57,11 @@ def study():
 			print("-----------------------------------------------------------")
 			continue
 		else:
+			#Load the main script for main menu
+			import main
+
+			#When loop breaks go to main.py
+			main.start()
 			break
 
 def stime(hours: float, classes: int):
@@ -116,6 +121,3 @@ def stime(hours: float, classes: int):
 		else:
 			print("Study each class for " + str(time) + " hour")
 		print("-----------------------------------------------------------")
-
-#When loop breaks go to main.py
-main.start()

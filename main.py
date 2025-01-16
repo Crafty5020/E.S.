@@ -1,12 +1,11 @@
 #imports
 from time import sleep
-import studytime
+import modules.studytime as st
 
-# Mark each module with an abbreviation
-st = studytime
+
 
 def start():
-	#Asks user what app they wan't to use
+	#Asks user what app they wan't to use any of the modules or close the app
 	while True:
 		try:
 			selec = int(input("Input 0 to close app, 1 for study time anylizer: "))
@@ -45,4 +44,4 @@ def close():
 	print("Ill see you later!")
 	print("___________________________________________________________")
 	sleep(0.5)
-	quit()
+	close()

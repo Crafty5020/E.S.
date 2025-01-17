@@ -57,6 +57,7 @@ def study():
 			print("-----------------------------------------------------------")
 			continue
 		else:
+			print("-----------------------------------------------------------")
 			#Load the main script for main menu
 			import main
 

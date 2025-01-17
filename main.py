@@ -2,9 +2,6 @@
 from time import sleep
 
 
-import modules.studytime as st
-import modules.quizzie as q
-
 
 def start():
 	#Asks user what app they wan't to use any of the modules or close the app
@@ -13,7 +10,7 @@ def start():
 			selec = int(input("Input 0 to close app, 1 for study time anylizer, 2 for quizzie: "))
 			#Checks if what user inputed is in range
 			if selec < 0 or selec > 2:
-				if selec != 2853 or selec != 1234:
+				if selec != 847250 or selec != 1234:
 					print("___________________________________________________________")
 					print("ERROR: value must be in the range from 0 to 2")
 					print("___________________________________________________________")
@@ -34,7 +31,31 @@ def start():
 		#Intis module quizzie
 		import modules.quizzie as q
 		q.quiz()
-	elif selec == 2853:
+	elif selec == 847250:
+		print("___________________________________________________________")
+		print("Initializing rasberry mode")
+		print("___________________________________________________________")
+
+		sleep(1)
+		while True:
+			rasber = input("To you have a raspberry pi pico or the Sense HAT or both?(Sense, Pico, Both, or Nothing): ").strip().capitalize()
+
+			if rasber != "SENSE" or rasber != "PICO" or rasber != "N" or rasber != "NOTHING" or rasber != "":
+				print('ERROR: value must be "Pico", Sense, or "Nothing"')
+			else:
+				if rasber == "SENSE":
+					rasber = 1
+				elif rasber == "PICO":
+					rasber = 2
+				elif rasber == "BOTH":
+					rasber = 3
+				else:
+					rasber = 0
+				break
+		
+		import ras.rasb as r
+
+		r.raspberry(rasber)
 
 
 #Closes the app

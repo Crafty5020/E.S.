@@ -1,4 +1,4 @@
-# E.S.
+# Estudy Surfing
 
 This is an app for helping you study. Also E.S. is short for Estudy Surfing. 
 ______________________________________________________________________________

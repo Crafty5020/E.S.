@@ -8,7 +8,7 @@ try:
 		sp.update_text('Loading Estudy Surfing')
 	sp.close()
 except ImportError:
-	pass
+	print("Developer mode activated")
 
 #Starts the app
 def starter():

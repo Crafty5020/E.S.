@@ -1,5 +1,5 @@
 #Imports
-import main
+import src.modules.main as main
 from time import sleep
 
 

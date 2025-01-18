@@ -59,7 +59,7 @@ def study():
 		else:
 			print("-----------------------------------------------------------")
 			#Load the main script for main menu
-			import main
+			import modules.main as main
 
 			#When loop breaks go to main.py
 			main.start()

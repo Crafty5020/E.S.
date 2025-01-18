@@ -84,7 +84,7 @@ Note: The operating system in wich you compile the app is important.
         no other OS may run the app.
 
 ------------------------------------------------------------------------------
-Credits:
+# Credits:
 
 Owner:
 Crafty5020

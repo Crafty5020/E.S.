@@ -4,7 +4,7 @@ import PyInstaller.__main__
 #Compile the project easily using pyinstaller by running this python code 
 #(Remember to use "python -m venv .venv" to make the virtual enviorment
 #  then activate the virtual enviorment and use "pip install pyinstaller".
-#  When you finish with that run "python exe" and you'll find the app
+#  When you finish with that run "python exe.py" and you'll find the app
 #  in the dist folder)
 PyInstaller.__main__.run([
     'pyinstaller.spec',

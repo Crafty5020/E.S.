@@ -50,8 +50,7 @@ pwsh:
 5.Run "pip install pyinstaller"
 
 This instruction is only for the regular version:
-
- 6.Run "pip install pygame"
+  6.Run "pip install pygame"
 
 7.Run "python exe.py
 Note: This will compile the project
@@ -59,32 +58,33 @@ Note: This will compile the project
 8.Find the app in dist
 
 9.Run the app
-    Note: The operating system in wich you compile the app is important.
-          For example: If you compile the app in windows the app will only run with windows
-          no other OS may run the app.
+
+Note: The operating system in wich you compile the app is important.
+        For example: If you compile the app in windows the app will only run with windows
+        no other OS may run the app.
 
 ------------------------------------------------------------------------------
 Credits:
 
-    Owner:
-        Crafty5020
+Owner:
+Crafty5020
 
-    Proggramer:
-        Crafty5020
+Proggramer:
+Crafty5020
 
-    Original idea:
-        Crafty5020
+Original idea:
+Crafty5020
 
-    Art design:
-        No one
+Art design:
+No one
 
-    Sound design:
-        No one
+Sound design:
+No one
 
-    Idea contributor:
-        Jose
-        Kendrick
+Idea contributor:
+Jose
+Kendrick
 
-    Alpha testers:
-        Louis
-        Jose
+Alpha testers:
+Louis
+Jose

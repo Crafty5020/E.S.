@@ -1,11 +1,13 @@
 # -*- mode: python ; coding: utf-8 -*-
 
 src = [
-    ('/src', '/src')
-    ('/src/modules', '/src/modules')
-    ('/src/resources', '/src/resources')
-    ('/src/resources/sounds', '/src/resources/sounds')
-    ('/src/modules/ras', '/src/modules/ras')
+    ('src', 'src'),
+    ('src/modules', 'src/modules'),
+    ('src/resources', 'src/resources'),
+    ('src/resources/sounds', 'src/resources/sounds'),
+    ('src/modules/ras', 'src/modules/ras')
+    ('README.md', 'README.md')
+    ('LICENSE', 'LICENSE')
 ]
 
 a = Analysis(
@@ -23,11 +25,28 @@ a = Analysis(
 )
 pyz = PYZ(a.pure)
 
+splash = Splash(
+    'src/resources/subtitut_logo copy.png',
+    binaries=a.binaries,
+    datas=a.datas,
+    text_pos=(10, 50),
+    text_size=12,
+    text_color='black',
+    text_default='Loading Estudy Surfing'
+)
+
+dist = DISTPATH(
+    'App'
+)
+
 exe = EXE(
     pyz,
     a.scripts,
+    splash,
+    splash.binaries,
     a.binaries,
     a.datas,
+    dist,
     [],
     name='Estudy Surfing',
     debug=False,

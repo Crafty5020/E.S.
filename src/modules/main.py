@@ -25,11 +25,11 @@ def start():
 		close()
 	elif selec == 1:
 		#Intis module studytime
-		import studytime as st
+		import src.modules.studytime as st
 		st.study()
 	elif selec == 2:
 		#Intis module quizzie
-		import quizzie as q
+		import src.modules.quizzie as q
 		q.quiz()
 	elif selec == 847250:
 		print("___________________________________________________________")
@@ -53,7 +53,7 @@ def start():
 					rasber = 0
 				break
 		
-		import ras.rasb as r
+		import src.modules.ras.rasb as r
 
 		r.raspberry(rasber)
 

@@ -47,12 +47,15 @@ pwsh:
 
     ".venv/bin/Activate.ps1"
 
+______________________________________________________________________________
 5.Run "pip install pyinstaller"
 ______________________________________________________________________________
-This instruction is only for the regular version:
-  6.Run "pip install pygame"
+6.Run "pip install pygame"
+
+Note: This instruction is only for the regular version
 ______________________________________________________________________________
 7.Run "python exe.py
+
 Note: This will compile the project
 ______________________________________________________________________________
 8.Find the app in dist

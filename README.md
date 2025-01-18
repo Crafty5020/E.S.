@@ -22,6 +22,7 @@ ______________________________________________________________________________
 4.Activate the virtual enviorment
 
 Windows:
+
 Note: You may need to run
 
     Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
@@ -37,6 +38,7 @@ but if your using cmd or command promt run
     .venv/Scripts/activate.bat
 
 Mac or Linux:
+
 In these OSes there are at least 6 terminals that you can use.
 Which in term means that there are 4 other commands specific to those terminals
 Note: You only need to use one by the terminal your using

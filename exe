@@ -4,9 +4,38 @@ import PyInstaller.__main__
 #Compile the project easily using pyinstaller by running this python code 
 #(Remember to use "python -m venv .venv" to make the virtual enviorment
 #  then activate the virtual enviorment and use "pip install pyinstaller".
-#  When you finish with that run "python exe.py" and you'll find the app
+#  When you finish with that run "python exe" and you'll find the app
 #  in the dist folder)
 
-PyInstaller.__main__.run([
-    'pyinstaller.spec',
-])
+def build_executable(os_name):
+    common_args = [
+        'loader.py',
+        '--onefile',
+        '--noconsole',
+        '--name=EstudySurfing',  # Corrected name syntax
+        '--add-data=src{}src'.format(';' if os_name == 'windows' else ':'),
+        '--add-data=src/modules{}src/modules'.format(';' if os_name == 'windows' else ':'),
+        '--add-data=src/resources{}src/resources'.format(';' if os_name == 'windows' else ':'),
+        '--add-data=src/resources/sounds{}src/resources/sounds'.format(';' if os_name == 'windows' else ':'),
+        '--add-data=src/modules/ras{}src/modules/ras'.format(';' if os_name == 'windows' else ':'),
+        '--add-data=README.md{}README.md'.format(';' if os_name == 'windows' else ':'),
+        '--add-data=LICENSE{}LICENSE'.format(';' if os_name == 'windows' else ':'),
+    ]
+
+    # Add platform-specific options
+    if os_name in ['windows', 'linux']:
+        common_args.append('--splash=src/resources/subtitut_logo.png')
+
+    # Run PyInstaller with the arguments
+    PyInstaller.__main__.run(common_args)
+
+while True:
+    os_input = input("What OS are you running this on (Windows, Mac, Linux): ").strip().lower()
+    if os_input in ['windows', 'mac', 'linux']:
+        build_executable(os_input)
+        print("Build completed! Check the 'dist' folder for the output.")
+        break
+    else:
+        print("___________________________________________________________")
+        print("ERROR: Value must be 'windows', 'linux', or 'mac'")
+        print("___________________________________________________________")

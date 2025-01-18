@@ -25,11 +25,11 @@ def start():
 		close()
 	elif selec == 1:
 		#Intis module studytime
-		import modules.studytime as st
+		import studytime as st
 		st.study()
 	elif selec == 2:
 		#Intis module quizzie
-		import modules.quizzie as q
+		import quizzie as q
 		q.quiz()
 	elif selec == 847250:
 		print("___________________________________________________________")

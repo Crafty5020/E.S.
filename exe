@@ -22,10 +22,6 @@ def build_executable(os_name):
         '--add-data=LICENSE{}LICENSE'.format(';' if os_name == 'windows' else ':'),
     ]
 
-    # Add platform-specific options
-    if os_name in ['windows', 'linux']:
-        common_args.append('--splash=src/resources/subtitut_logo.png')
-
     # Run PyInstaller with the arguments
     PyInstaller.__main__.run(common_args)
 

@@ -6,6 +6,7 @@ import PyInstaller.__main__
 #  then activate the virtual enviorment and use "pip install pyinstaller".
 #  When you finish with that run "python exe.py" and you'll find the app
 #  in the dist folder)
+
 PyInstaller.__main__.run([
     'pyinstaller.spec',
 ])

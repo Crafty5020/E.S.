@@ -7,28 +7,34 @@ ______________________________________________________________________________
 # Compiling instructions for both version
 ------------------------------------------------------------------------------
 
-1.Run "cd" to the root directory in the terminal
+1.Run 
+
+    cd nextdirectory
+
+ to the root directory in the terminal
 ______________________________________________________________________________
 2.Install python (If you don't have it): https://www.python.org/downloads/
 ______________________________________________________________________________
-3.Run in terminal "python -m venv .venv"
+3.Run in terminal 
+
+    python -m venv .venv
 ______________________________________________________________________________
 4.Activate the virtual enviorment
 
 Windows:
 Note: You may need to run
 
-    "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser"
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 to allow the activation of the virtual enviorment
 
 If using powershell as terminal then run 
     
-    ".venv/Scripts/Activate.ps1"
+    .venv/Scripts/Activate.ps1
 
 but if your using cmd or command promt run 
 
-    ".venv/Scripts/activate.bat"
+    .venv/Scripts/activate.bat
 
 Mac or Linux:
 In these OSes there are at least 6 terminals that you can use.
@@ -37,29 +43,35 @@ Note: You only need to use one by the terminal your using
 
 bash/zsh:
 
-    "source .venv/bin/activate"
+    source .venv/bin/activate
 
 fish:
 
-    "source .venv/bin/activate.fish"
+    source .venv/bin/activate.fish
 
 csh/tcsh:
 
-    "source .venv/bin/activate.csh"
+    source .venv/bin/activate.csh
 
 
 pwsh: 
 
-    ".venv/bin/Activate.ps1"
+    .venv/bin/Activate.ps1
 
 ______________________________________________________________________________
-5.Run "pip install pyinstaller"
+5.Run 
+
+    pip install pyinstaller
 ______________________________________________________________________________
-6.Run "pip install pygame"
+6.Run 
+
+    pip install pygame
 
 Note: This instruction is only for the regular version
 ______________________________________________________________________________
-7.Run "python exe"
+7.Run 
+
+    python exe
 
 Note: This will compile the project
 ______________________________________________________________________________

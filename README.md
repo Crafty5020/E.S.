@@ -14,35 +14,47 @@ ______________________________________________________________________________
 3.Run in terminal "python -m venv .venv"
 
 4.Activate the virtual enviorment
-    Windows:
-        Note: You may need to run "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser" to allow the activation of the virtual enviorment
+Windows:
+Note: You may need to run "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser" to allow the activation of the virtual enviorment
 
-        If using powershell as terminal then run ".venv/Scripts/Activate.ps1"
-        but if your using cmd or command promt run ".venv/Scripts/activate.bat"
+If using powershell as terminal then run 
     
-    Mac or Linux:
-        In these os there are at least 6 terminals you can use listed on the docs.
-        Which in term means that there are 4 other commands specific to those terminals
-        (Yoy only need to use one by the terminal your using)
+    ".venv/Scripts/Activate.ps1"
 
-        bash/zsh:
-            "source .venv/bin/activate"
-        
-        fish:
-            "source .venv/bin/activate.fish"
-        
-        csh/tcsh:
-            "source .venv/bin/activate.csh"
+but if your using cmd or command promt run 
 
-        pwsh: 
-            ".venv/bin/Activate.ps1"
+    ".venv/Scripts/activate.bat"
+
+Mac or Linux:
+In these os there are at least 6 terminals you can use listed on the docs.
+Which in term means that there are 4 other commands specific to those terminals
+(Yoy only need to use one by the terminal your using)
+
+bash/zsh:
+
+    "source .venv/bin/activate"
+
+fish:
+
+    "source .venv/bin/activate.fish"
+
+csh/tcsh:
+
+    "source .venv/bin/activate.csh"
+
+
+pwsh: 
+
+    ".venv/bin/Activate.ps1"
+
 5.Run "pip install pyinstaller"
 
-This instruction is only for the regular version
-    6.Run "pip install pygame"
+This instruction is only for the regular version:
+
+ 6.Run "pip install pygame"
 
 7.Run "python exe.py
-    Note: This will compile the project
+Note: This will compile the project
 
 8.Find the app in dist
 

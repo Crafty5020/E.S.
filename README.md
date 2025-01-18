@@ -8,11 +8,11 @@ ______________________________________________________________________________
 ______________________________________________________________________________
 
 1.Run "cd" to the root directory in the terminal
-
+______________________________________________________________________________
 2.Install python: https://www.python.org/downloads/
-
+______________________________________________________________________________
 3.Run in terminal "python -m venv .venv"
-
+______________________________________________________________________________
 4.Activate the virtual enviorment
 Windows:
 Note: You may need to run "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser" to allow the activation of the virtual enviorment
@@ -48,15 +48,15 @@ pwsh:
     ".venv/bin/Activate.ps1"
 
 5.Run "pip install pyinstaller"
-
+______________________________________________________________________________
 This instruction is only for the regular version:
   6.Run "pip install pygame"
-
+______________________________________________________________________________
 7.Run "python exe.py
 Note: This will compile the project
-
+______________________________________________________________________________
 8.Find the app in dist
-
+______________________________________________________________________________
 9.Run the app
 
 Note: The operating system in wich you compile the app is important.

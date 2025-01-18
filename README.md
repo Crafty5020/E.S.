@@ -9,13 +9,18 @@ ______________________________________________________________________________
 
 1.Run "cd" to the root directory in the terminal
 ______________________________________________________________________________
-2.Install python: https://www.python.org/downloads/
+2.Install python (If you don't have it): https://www.python.org/downloads/
 ______________________________________________________________________________
 3.Run in terminal "python -m venv .venv"
 ______________________________________________________________________________
 4.Activate the virtual enviorment
+
 Windows:
-Note: You may need to run "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser" to allow the activation of the virtual enviorment
+Note: You may need to run
+
+    "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser"
+
+to allow the activation of the virtual enviorment
 
 If using powershell as terminal then run 
     
@@ -26,9 +31,9 @@ but if your using cmd or command promt run
     ".venv/Scripts/activate.bat"
 
 Mac or Linux:
-In these os there are at least 6 terminals you can use listed on the docs.
+In these OSes there are at least 6 terminals that you can use.
 Which in term means that there are 4 other commands specific to those terminals
-(Yoy only need to use one by the terminal your using)
+Note: You only need to use one by the terminal your using
 
 bash/zsh:
 
@@ -75,19 +80,8 @@ Crafty5020
 Proggramer:
 Crafty5020
 
-Original idea:
-Crafty5020
-
 Art design:
-No one
+Juli
 
 Sound design:
 No one
-
-Idea contributor:
-Jose
-Kendrick
-
-Alpha testers:
-Louis
-Jose

@@ -11,7 +11,7 @@ ______________________________________________________________________________
 
     cd nextdirectory
 
- to the root directory in the terminal
+ (Change "nextdirectory" to the next folder name) to the root directory in the terminal
 ______________________________________________________________________________
 2.Install python (If you don't have it): https://www.python.org/downloads/
 ______________________________________________________________________________

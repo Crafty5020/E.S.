@@ -4,7 +4,7 @@ This is an app for helping you study. Also E.S. is short for Estudy Surfing.
 ______________________________________________________________________________
 There are two version the cmd version and the regular version(which is the version that uses pygame)
 ______________________________________________________________________________
-# Compiling instructions for both version
+# Compiling instructions for both versions
 ------------------------------------------------------------------------------
 
 1.Run 

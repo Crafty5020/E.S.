@@ -24,14 +24,14 @@ def study():
 					print("___________________________________________________________")
 					print("ERROR: value must be a positive value or not be 0")
 					print("___________________________________________________________")
-					sleep(0.5)
+					sleep(1)
 					continue
 				break
 			except ValueError:
 				print("___________________________________________________________")
 				print("ERROR: value must be an integer(a number without decimal point)")
 				print("___________________________________________________________")
-				sleep(0.5)
+				sleep(1)
 
 		#Asks user some questions
 		while True:
@@ -42,14 +42,14 @@ def study():
 					print("___________________________________________________________")
 					print("ERROR: value must be a positive value or not be 0")
 					print("___________________________________________________________")
-					sleep(0.5)
+					sleep(1)
 					continue
 				break
 			except ValueError:
 				print("___________________________________________________________")
 				print("ERROR: value must be a number")
 				print("___________________________________________________________")
-				sleep(0.5)
+				sleep(1)
 
 		clear()
 		#Runs the math

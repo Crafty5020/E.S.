@@ -17,14 +17,14 @@ def start():
 					print("___________________________________________________________")
 					print("ERROR: value must be in the range from 0 to 2")
 					print("___________________________________________________________")
-					sleep(0.5)
+					sleep(1)
 					continue
 			break
 		except ValueError:
 			print("___________________________________________________________")
 			print("ERROR: value must be an integer(a number without decimal point)")
 			print("___________________________________________________________")
-			sleep(0.5)
+			sleep(1)
 	#checks for the number inputed to see what module to run
 	if selec == 0:
 		clear()

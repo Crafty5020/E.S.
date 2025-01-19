@@ -107,7 +107,9 @@ def selector(Creator: bool):
     while True:
         clear()
         quizzesl = os.scandir(quizzesf)
-        print(quizzesl)
+        for entry in quizzesl:
+            if entry.is_dir() or entry.is_file():
+                print(entry.name)
         print("-----------------------------------------------------------")
         f = input("Type the name of one of those quizzes to run a quizz: " )
         if not f in quizzes:
@@ -126,12 +128,16 @@ def selector(Creator: bool):
 def run(quizz: str):
     q = os.path.join(quizzesf, quizz)
 
-    
+    qu = open(q, 'r')
+
+    score = 0
+    letters = ['a', 'b', 'c', 'd']
+    question = 0
 
     while True:
         clear()
         o = input("To you wan't the questions to be random or not?(Y, N): ").strip().lower()
-        if o != "y" or o != "n":
+        if o != "y" and o != "n":
             print("___________________________________________________________")
             print("ERROR: value must be Y or N")
             print("___________________________________________________________")
@@ -143,7 +149,49 @@ def run(quizz: str):
         random()
         return
     
+
+    for i in qu:
+
+        if i[question]['type'] == 'question':
+            clear()
+            prompt = input(i[question]['question'] + ": ")
+
+            if prompt == i[question]['answer']:
+                print("You are correct!")
+                sleep(1)
+                score += 1
+            else:
+                print("You are incorrect! The correct answer is " + i[question]["answer"])
+                sleep(1)
+
+        if i[question]['type'] == 'pick':
+            print(i["question"])
+            for l in i[question][letters]:
+                print(l)
+            
+            while True:
+                prompt = input()
+                if not prompt in i:
+                    print("___________________________________________________________")
+                    print("ERROR: value is not any of the options (a, b, c, d)")
+                    print("___________________________________________________________")
+                    continue
+                break
+
+            if prompt == i[question]["answer"]:
+                print("You are correct!")
+                sleep(1)
+                scrore += 1
+            else:
+                print("You are incorrect! The correct answer is " + i["answer"])
+                sleep(1)
+        
+        question += 1
     
+    reset = input("")
+
+            
+        
     
 def random():
     pass

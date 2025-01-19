@@ -13,7 +13,9 @@ def quiz():
             clear()
             creator = int(input("Enter 1 to use the creator or 2 if not(1, 2): "))
             if creator < 1 or creator  > 2:
+                print("___________________________________________________________")
                 print("ERROR: value must be 1 or 2")
+                print("___________________________________________________________")
                 sleep(0.5)
                 continue
             break

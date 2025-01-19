@@ -35,8 +35,9 @@ If using powershell as terminal then run
 
 but if your using cmd or command promt run 
 
-    .venv/Scripts/activate.bat
+    activate.bat
 
+Note: There is no need to specify were the bat file is. (Belive me, I tried to.)
 Mac or Linux:
 
 In these OSes there are at least 6 terminals that you can use.

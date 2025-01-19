@@ -58,7 +58,8 @@ def study():
 
 		#Asks user if they wan't to use module again
 		clear()
-		repeat = input("To you wan't to repeat the study time anylizer?" + "(Y,N): ").strip().capitalize()
+
+		repeat = input("To you wan't to repeat the study time anylizer?(Y,N): ").strip().capitalize()
 		if repeat == "Y" or repeat == "YES":
 			continue
 		else:
@@ -99,7 +100,6 @@ def stime(hours: float, classes: int):
 			print("Study each class for " + str(time) + " minutes")
 		else:
 			print("Study each class for " + str(time) + " minutes")
-		print("-----------------------------------------------------------")
 	else:
 
 		#Calculates time from minutes to hours
@@ -126,4 +126,3 @@ def stime(hours: float, classes: int):
 			print("Study each class for " + str(time) + " hours")
 		else:
 			print("Study each class for " + str(time) + " hour")
-		print("-----------------------------------------------------------")

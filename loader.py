@@ -7,12 +7,11 @@ from src.modules.clear_term import clear
 
 #Starts the app
 def starter():
+	clear()
 	if getattr(sys, 'frozen', False):
 		os.chdir(sys._MEIPASS)
-	print("___________________________________________________________")
 	print("Hello and welcome to Estudy Surfing version Stage 0.2")
 	sleep(1)
-	print("-----------------------------------------------------------")
 	clear()
 	main.start()
 

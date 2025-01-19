@@ -2,6 +2,7 @@ import os
 import sys
 from time import sleep
 from src.modules.clear_term import clear
+import json
 
 if getattr(sys, 'frozen', False):
     application_path = os.path.dirname(sys.executable)
@@ -128,11 +129,11 @@ def selector(Creator: bool):
 def run(quizz: str):
     q = os.path.join(quizzesf, quizz)
 
-    qu = open(q, 'r')
+    with open(q, 'r') as file:
+        quiz_data = json.load(file)
 
     score = 0
     letters = ['a', 'b', 'c', 'd']
-    question = 0
 
     while True:
         clear()
@@ -145,57 +146,76 @@ def run(quizz: str):
             continue
         break
     
+    question_keys = list(quiz_data)
     if o == "y":
-        random()
-        return
+        import random
+        random.shuffle(question_keys)
     
 
-    for i in qu:
+    for key in question_keys:
+        question = quiz_data[key]
 
-        if i[question]['type'] == 'question':
-            clear()
-            prompt = input(i[question]['question'] + ": ")
+        clear()
+        
+        if question['type'] == 'question':
+            prompt = input(question['question'] + ": ")
 
-            if prompt == i[question]['answer']:
+            if prompt == question['answer']:
                 print("You are correct!")
                 sleep(1)
                 score += 1
             else:
-                print("You are incorrect! The correct answer is " + i[question]["answer"])
+                print("You are incorrect! The correct answer is " + question["answer"])
                 sleep(1)
 
-        if i[question]['type'] == 'pick':
-            print(i["question"])
-            for l in i[question][letters]:
-                print(l)
+        if question['type'] == 'pick':
+            print(question['question'])
+            for option in letters:
+                print(option + ': ' + question[option])
             
             while True:
-                prompt = input()
-                if not prompt in i:
+                prompt = input("Input a, b, c, or d based on the options above: ").strip().lower()
+                if not prompt in letters:
                     print("___________________________________________________________")
                     print("ERROR: value is not any of the options (a, b, c, d)")
                     print("___________________________________________________________")
                     continue
                 break
 
-            if prompt == i[question]["answer"]:
+            if prompt == question["answer"]:
                 print("You are correct!")
                 sleep(1)
-                scrore += 1
+                score += 1
             else:
-                print("You are incorrect! The correct answer is " + i["answer"])
+                print("You are incorrect! The correct answer is " + question["answer"])
                 sleep(1)
-        
-        question += 1
     
-    reset = input("")
+    clear()
+    print("Quizz complete!")
+    print("You got " + str(score) + " out of "
+            + str(len(quiz_data)) + " which is %"
+            + str(score/len(quiz_data)) + " in percentage")
+    sleep(2)
+    print("-----------------------------------------------------------")
+    while True:
+        reset = input("To yo wan't to reset quizzie(Y, N): ")
+        if reset != "y" and reset != "n":
+            print("___________________________________________________________")
+            print("ERROR: value must be Y or N")
+            print("___________________________________________________________")
+            sleep(1)
+            continue
+        break
 
-            
-        
-    
-def random():
-    pass
+    clear()
+    if reset == "y":
+        selector()
+    else:
+        print("Returning to main menu")
+        sleep(1)
+        import src.modules.main as main
 
+        main.start()
 
 def create(empty: bool, file: str, rename: bool, delete: bool,):
     clear()

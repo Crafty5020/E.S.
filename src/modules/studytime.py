@@ -54,10 +54,10 @@ def study():
 		clear()
 		#Runs the math
 		stime(hours, classes)
-		sleep(1)
+		sleep(2)
 
 		#Asks user if they wan't to use module again
-		clear()
+		print("-----------------------------------------------------------")
 
 		repeat = input("To you wan't to repeat the study time anylizer?(Y,N): ").strip().capitalize()
 		if repeat == "Y" or repeat == "YES":

@@ -19,7 +19,7 @@ def build_executable(os_name):
         '--add-data=src/resources/sounds{}src/resources/sounds'.format(';' if os_name == 'windows' else ':'),
         '--add-data=src/modules/ras{}src/modules/ras'.format(';' if os_name == 'windows' else ':'),
         '--add-data=README.md{}README.md'.format(';' if os_name == 'windows' else ':'),
-        '--add-data=LICENSE{}LICENSE'.format(';' if os_name == 'windows' else ':'),
+        '--icon=src/resources/subtitut_logo.png'
     ]
 
     # Run PyInstaller with the arguments

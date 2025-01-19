@@ -1,6 +1,6 @@
 #Imports
 from time import sleep
-
+from src.modules.clear_term import clear
 
 #Main function
 def study():
@@ -18,50 +18,55 @@ def study():
 		#Asks user some questions
 		while True:
 			try:
+				clear()
 				classes = int(input("How many classes to you plan to study?: "))
 				if classes <= 0:
 					print("___________________________________________________________")
 					print("ERROR: value must be a positive value or not be 0")
 					print("___________________________________________________________")
+					sleep(0.5)
 					continue
 				break
 			except ValueError:
 				print("___________________________________________________________")
 				print("ERROR: value must be an integer(a number without decimal point)")
 				print("___________________________________________________________")
-		print("-----------------------------------------------------------")
+				sleep(0.5)
 
 		#Asks user some questions
 		while True:
 			try:
+				clear()
 				hours = float(input("How much time to you wan't to study?(In hours): "))
 				if hours <= 0:
 					print("___________________________________________________________")
 					print("ERROR: value must be a positive value or not be 0")
 					print("___________________________________________________________")
+					sleep(0.5)
 					continue
 				break
 			except ValueError:
 				print("___________________________________________________________")
 				print("ERROR: value must be a number")
 				print("___________________________________________________________")
-		print("-----------------------------------------------------------")
+				sleep(0.5)
 
+		clear()
 		#Runs the math
 		stime(hours, classes)
-		sleep(0.2)
+		sleep(1)
 
 		#Asks user if they wan't to use module again
+		clear()
 		repeat = input("To you wan't to repeat the study time anylizer?" + "(Y,N): ").strip().capitalize()
 		if repeat == "Y" or repeat == "YES":
-			print("-----------------------------------------------------------")
 			continue
 		else:
-			print("-----------------------------------------------------------")
 			#Load the main script for main menu
 			import src.modules.main as main
 
 			#When loop breaks go to main.py
+			clear()
 			main.start()
 			break
 

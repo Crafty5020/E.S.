@@ -97,7 +97,7 @@ Proggramer:
 Crafty5020
 
 Art design:
-Juli
+CurlyCloud
 
 Sound design:
 No one

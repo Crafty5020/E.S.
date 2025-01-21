@@ -5,16 +5,7 @@ from src.modules.clear_term import clear
 import json
 import pathlib
 
-if getattr(sys, 'frozen', False):
-    application_path = os.path.dirname(sys.executable)
-    quizzesf = os.path.join(application_path, 'quizzes')
-elif __file__:
-    quizzesf = os.path.join(sys.path[0], 'quizzes')
 
-if not os.path.exists(quizzesf):
-    os.makedirs(quizzesf)
-
-quizzes = os.listdir(quizzesf)
 
 def quiz():
     print("___________________________________________________________")
@@ -47,10 +38,21 @@ def quiz():
 
 
 def selector(Creator: bool):
+    if getattr(sys, 'frozen', False):
+        application_path = os.path.dirname(sys.executable)
+        quizzesf = os.path.join(application_path, 'quizzes')
+    elif __file__:
+        quizzesf = os.path.join(sys.path[0], 'quizzes')
+
+    if not os.path.exists(quizzesf):
+        os.makedirs(quizzesf)
+
+    quizzes = os.listdir(quizzesf)
+    
     new = False
     dele = False
 
-
+    
     if len(quizzes) == 0 and Creator == False:
         clear()
         print("Looks like you didn't create any quizzes.")
@@ -136,6 +138,15 @@ def selector(Creator: bool):
         create(False, "", dele, new)
 
 def run(quizz: str):
+    if getattr(sys, 'frozen', False):
+        application_path = os.path.dirname(sys.executable)
+        quizzesf = os.path.join(application_path, 'quizzes')
+    elif __file__:
+        quizzesf = os.path.join(sys.path[0], 'quizzes')
+
+    if not os.path.exists(quizzesf):
+        os.makedirs(quizzesf)
+
     q = os.path.join(quizzesf, quizz)
 
     with open(q, 'r') as file:
@@ -177,7 +188,7 @@ def run(quizz: str):
                 print("You are incorrect! The correct answer is " + question["answer"])
                 sleep(1)
 
-        if question['type'] == 'pick':
+        if question['type'] == 'choice':
             print(question['question'])
             for option in letters:
                 print(option + ': ' + question[option])
@@ -233,6 +244,15 @@ def run(quizz: str):
         main.start()
 
 def create(empty: bool, file: str, delete: bool, new: bool):
+    if getattr(sys, 'frozen', False):
+        application_path = os.path.dirname(sys.executable)
+        quizzesf = os.path.join(application_path, 'quizzes')
+    elif __file__:
+        quizzesf = os.path.join(sys.path[0], 'quizzes')
+
+    if not os.path.exists(quizzesf):
+        os.makedirs(quizzesf)
+
     quiz_content = {}
 
     clear()
@@ -304,7 +324,6 @@ def create(empty: bool, file: str, delete: bool, new: bool):
             question_number_print = question_number + 1
             while True:
                 clear()
-                print(quiz_content)
                 type_question = input("What type of question to you wan't your " + str(question_number_print) + " question be?(Multiple Choice, Question): ").strip().lower()
                 if type_question != "multiple choice" and type_question != "question" and type_question != "choice":
                     print("___________________________________________________________")
@@ -320,7 +339,7 @@ def create(empty: bool, file: str, delete: bool, new: bool):
             quiz_content[str(question_number)]['type'] = type_question
         
             clear()
-            question = input("What question to you wan't your " + str(question_number_print) + "question be?: ")
+            question = input("What question to you wan't your " + str(question_number_print) + " question be?: ")
 
             quiz_content[str(question_number)]['question'] = question
 
@@ -332,7 +351,8 @@ def create(empty: bool, file: str, delete: bool, new: bool):
                     options[letter] = option
                 while True:
                     clear()
-                    print(options)
+                    for key, value in options.items():
+                        print(f"{key}.{value}")
                     print("-----------------------------------------------------------")
                     answer = input("Which of the following options are the correct answer?: ").strip().lower()
                     if not answer in ['a', 'b', 'c', 'd']:
@@ -343,24 +363,21 @@ def create(empty: bool, file: str, delete: bool, new: bool):
                     break
                 
                 quiz_content[str(question_number)]["answer"] = answer
-                quiz_content.update([str(question_number)][options])
+                for key, value in options.items():
+                    quiz_content[str(question_number)][key] = value
             else:
                 clear()
                 answer = input("What the answer of the question?: ")
                 quiz_content[str(question_number)]["answer"] = answer
             
-            json.dump(quiz_content, quiz_data)
-            quiz_data.close()
-            clear()
-            print("Creation process finished")
-            sleep(1)
-            print("-----------------------------------------------------------")
-            print("Returning to main menu...")
-            import src.modules.main as main
+        json.dump(quiz_content, quiz_data)
+        quiz_data.close()
+        clear()
+        print("Creation process finished")
+        sleep(1)
 
-            main.start()
-    else:
         while True:
+            clear()
             r = input("To you wan't to return to main menu or select a quizz?(Main, Selector): ").strip().lower()
             if r != "main" and r != "selector":
                 print("___________________________________________________________")
@@ -378,7 +395,6 @@ def create(empty: bool, file: str, delete: bool, new: bool):
         
         
 
-            
 
 
 

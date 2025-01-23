@@ -1,27 +1,33 @@
 #imports
 from time import sleep
-
+from src.modules.clear_term import clear
 
 
 def start():
 	#Asks user what app they wan't to use any of the modules or close the app
 	while True:
 		try:
+			clear()
 			selec = int(input("Input 0 to close app, 1 for study time anylizer, 2 for quizzie: "))
 			#Checks if what user inputed is in range
 			if selec < 0 or selec > 2:
-				if selec != 847250 or selec != 1234:
+				#Code for raspberry pi mode. 16 is the position p in the alphabet
+				# and 9 is the postion of i in the alphabet
+				if selec != 169:
 					print("___________________________________________________________")
 					print("ERROR: value must be in the range from 0 to 2")
 					print("___________________________________________________________")
+					sleep(1)
 					continue
 			break
 		except ValueError:
 			print("___________________________________________________________")
 			print("ERROR: value must be an integer(a number without decimal point)")
 			print("___________________________________________________________")
+			sleep(1)
 	#checks for the number inputed to see what module to run
 	if selec == 0:
+		clear()
 		close()
 	elif selec == 1:
 		#Intis module studytime
@@ -34,9 +40,9 @@ def start():
 	elif selec == 847250:
 		print("___________________________________________________________")
 		print("Initializing rasberry mode")
-		print("___________________________________________________________")
-
+		print("-----------------------------------------------------------")
 		sleep(1)
+		clear()
 		while True:
 			rasber = input("To you have a raspberry pi pico or the Sense HAT or both?(Sense, Pico, Both, or Nothing): ").strip().capitalize()
 
@@ -64,4 +70,5 @@ def close():
 	print("Ill see you later!")
 	print("___________________________________________________________")
 	sleep(0.5)
-	exit()
+	clear()
+	return

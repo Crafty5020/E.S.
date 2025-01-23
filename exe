@@ -1,5 +1,5 @@
 import PyInstaller.__main__
-
+import platform
 
 #Compile the project easily using pyinstaller by running this python code 
 #(Remember to use "python -m venv .venv" to make the virtual enviorment
@@ -20,17 +20,13 @@ def build_executable(os_name):
         '--add-data=README.md{}README.md'.format(';' if os_name == 'windows' else ':'),
     ]
 
-    # Add platform-specific options
-    if os_name in ['windows', 'linux']:
-        common_args.append('--splash=src/resources/subtitut_logo.png')
-
     # Run PyInstaller with the arguments
     PyInstaller.__main__.run(common_args)
 
 while True:
-    os_input = input("What OS are you running this on (Windows, Mac, Linux): ").strip().lower()
-    if os_input in ['windows', 'mac', 'linux']:
-        build_executable(os_input)
+    os = platform.system().lower()
+    if os in ['windows', 'mac', 'linux']:
+        build_executable(os)
         print("Build completed! Check the 'dist' folder for the output.")
         break
     else:

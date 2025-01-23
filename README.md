@@ -4,7 +4,7 @@ This is an app for helping you study. Also E.S. is short for Estudy Surfing.
 ______________________________________________________________________________
 There are two version the cmd version and the regular version(which is the version that uses pygame)
 ______________________________________________________________________________
-# Compiling instructions for both version
+# Compiling instructions for both versions
 ------------------------------------------------------------------------------
 
 1.Run 
@@ -35,8 +35,9 @@ If using powershell as terminal then run
 
 but if your using cmd or command promt run 
 
-    .venv/Scripts/activate.bat
+    activate.bat
 
+Note: There is no need to specify were the bat file is. (Belive me, I tried to.)
 Mac or Linux:
 
 In these OSes there are at least 6 terminals that you can use.
@@ -96,7 +97,7 @@ Proggramer:
 Crafty5020
 
 Art design:
-Juli
+CurlyCloud
 
 Sound design:
 No one

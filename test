@@ -1,0 +1,9 @@
+a = {}
+
+print(a)
+input()
+a["Hello"] = {}
+print(a)
+input()
+a["Hello"]['Lol'] = 'LOL'
+print(a)

@@ -1,9 +1,7 @@
 #Imports
 import src.modules.main as main
 from time import sleep
-import sys
-import os
-from src.modules.clear_term import clear
+
 
 #Starts the app
 def starter():

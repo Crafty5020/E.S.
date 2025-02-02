@@ -2,7 +2,7 @@
 
 This is an app for helping you study. Also E.S. is short for Estudy Surfing.
 ______________________________________________________________________________
-Where using Godot game engine to make the with C#. Whe appreciate if you donate to the Godot Foundation so that they can keep updating the game engine and support C# in web.
+Where using Godot game engine to make the with C#. Whe appreciate if you donate to the Godot Foundation so that they can keep updating the game engine and support C# for web.
 
 For more information go to: <https://godotengine.org/>
 ______________________________________________________________________________

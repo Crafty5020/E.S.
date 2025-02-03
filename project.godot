@@ -10,9 +10,10 @@ config_version=5
 
 [application]
 
-config/name="E.S."
+config/name="Estudy Surfing"
+run/main_scene="res://node_2d.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://logo.svg"
 
 [dotnet]
 

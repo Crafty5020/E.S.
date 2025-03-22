@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dsktweyu60b4b"]
+
+[ext_resource type="FontFile" uid="uid://hr50byr1d7o3" path="res://fonts/DarumadropOne-Regular.ttf" id="1_s36ac"]
+
+[resource]
+Label/colors/font_color = Color(0.321569, 0.643137, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/colors/font_shadow_color = Color(0, 0.362554, 0.673476, 1)
+Label/font_sizes/font_size = 47
+Label/fonts/font = ExtResource("1_s36ac")

@@ -11,9 +11,17 @@ config_version=5
 [application]
 
 config/name="Estudy Surfing"
-run/main_scene="res://node_2d.tscn"
-config/features=PackedStringArray("4.3", "GL Compatibility")
+config/tags=PackedStringArray("brandew&craftystudiosproject", "e.s.")
+run/main_scene="res://menus/main_menu.tscn"
+config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://logo.svg"
+
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=1920
+window/stretch/mode="viewport"
+window/handheld/orientation=1
 
 [dotnet]
 

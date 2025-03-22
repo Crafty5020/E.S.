@@ -1,0 +1,27 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://djumny6afl4rn"]
+
+[ext_resource type="FontFile" uid="uid://hr50byr1d7o3" path="res://fonts/DarumadropOne-Regular.ttf" id="1_3dni8"]
+[ext_resource type="StyleBox" uid="uid://c1210jqndagk" path="res://themes/main_menu/main_menu_flat.tres" id="2_va2tg"]
+[ext_resource type="StyleBox" uid="uid://dwtt2hog5dkna" path="res://themes/main_menu/main_menu_pressed.tres" id="3_ik4eo"]
+[ext_resource type="StyleBox" uid="uid://cfdi0kl3rfn1l" path="res://themes/main_menu/main_menu_hover.tres" id="4_75ofa"]
+
+[resource]
+Button/colors/font_color = Color(0.243137, 0.87451, 0.87451, 1)
+Button/colors/font_disabled_color = Color(0.0194581, 0.18485, 0.184909, 1)
+Button/colors/font_focus_color = Color(0.243137, 0.87451, 0.87451, 1)
+Button/colors/font_hover_color = Color(0.138789, 0.62848, 0.628705, 1)
+Button/colors/font_hover_pressed_color = Color(0.0735347, 0.389318, 0.38929, 1)
+Button/colors/font_outline_color = Color(0, 0, 0.309804, 1)
+Button/colors/font_pressed_color = Color(0.0745098, 0.388235, 0.388235, 1)
+Button/font_sizes/font_size = 39
+Button/fonts/font = ExtResource("1_3dni8")
+Button/styles/focus = ExtResource("2_va2tg")
+Button/styles/hover = ExtResource("4_75ofa")
+Button/styles/hover_pressed = ExtResource("4_75ofa")
+Button/styles/normal = ExtResource("2_va2tg")
+Button/styles/pressed = ExtResource("3_ik4eo")
+Label/colors/font_color = Color(0, 0.364706, 1, 1)
+Label/colors/font_outline_color = Color(3.63989e-07, 0.0169632, 0.112039, 1)
+Label/colors/font_shadow_color = Color(1.29953e-05, 0.241721, 0.690836, 1)
+Label/font_sizes/font_size = 160
+Label/fonts/font = ExtResource("1_3dni8")

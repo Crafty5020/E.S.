@@ -1,0 +1,130 @@
+[gd_scene load_steps=6 format=3 uid="uid://cti1tkblpac21"]
+
+[ext_resource type="Texture2D" uid="uid://cd2vnvlmti27y" path="res://testIm.svg" id="1_ctss6"]
+[ext_resource type="Script" uid="uid://csj8yo33qclrm" path="res://menus/logic/study_time.gd" id="1_ma73p"]
+[ext_resource type="Theme" uid="uid://dsktweyu60b4b" path="res://themes/study_time/study.tres" id="2_6e2rm"]
+[ext_resource type="Theme" uid="uid://djumny6afl4rn" path="res://themes/main_menu/main_menu.tres" id="4_jg0wx"]
+[ext_resource type="StyleBox" uid="uid://cdmev0hlrjosf" path="res://themes/exit.tres" id="5_11txu"]
+
+[node name="study_time" type="Node2D"]
+script = ExtResource("1_ma73p")
+
+[node name="water" type="Sprite2D" parent="."]
+position = Vector2(540, 1768.5)
+scale = Vector2(9.60937, 3.02344)
+texture = ExtResource("1_ctss6")
+
+[node name="classes" type="LineEdit" parent="."]
+offset_left = 785.0
+offset_top = 627.0
+offset_right = 865.0
+offset_bottom = 671.0
+theme_override_font_sizes/font_size = 20
+context_menu_enabled = false
+emoji_menu_enabled = false
+virtual_keyboard_type = 2
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+caret_blink = true
+
+[node name="time" type="LineEdit" parent="."]
+offset_left = 928.0
+offset_top = 704.0
+offset_right = 1007.0
+offset_bottom = 746.0
+theme_override_font_sizes/font_size = 20
+context_menu_enabled = false
+emoji_menu_enabled = false
+virtual_keyboard_type = 3
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+caret_blink = true
+caret_force_displayed = true
+
+[node name="classes_label" type="Label" parent="."]
+offset_left = 24.0
+offset_top = 608.0
+offset_right = 706.0
+offset_bottom = 671.0
+theme = ExtResource("2_6e2rm")
+text = "How many classes you need to study:"
+
+[node name="classes_label2" type="Label" parent="."]
+offset_left = 80.0
+offset_top = 144.0
+offset_right = 1022.0
+offset_bottom = 434.0
+theme = ExtResource("2_6e2rm")
+theme_override_colors/font_color = Color(0, 0.364706, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.0156863, 0.113725, 1)
+theme_override_colors/font_outline_color = Color(0, 0.243137, 0.690196, 1)
+theme_override_font_sizes/font_size = 200
+text = "Study Time"
+
+[node name="time_label" type="Label" parent="."]
+offset_left = 24.0
+offset_top = 680.0
+offset_right = 846.0
+offset_bottom = 743.0
+theme = ExtResource("2_6e2rm")
+text = "How much time you have to study (In hours):"
+
+[node name="result_label" type="Label" parent="."]
+offset_left = 56.0
+offset_top = 1048.0
+offset_right = 1028.0
+offset_bottom = 1313.0
+theme = ExtResource("2_6e2rm")
+theme_override_font_sizes/font_size = 90
+text = "Time to study each class:
+"
+
+[node name="error" type="Label" parent="."]
+offset_left = 66.0
+offset_top = 753.0
+offset_right = 1038.0
+offset_bottom = 1015.0
+theme = ExtResource("2_6e2rm")
+theme_override_colors/font_color = Color(0.877616, 0.877616, 0.877616, 1)
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="result" type="Label" parent="."]
+offset_left = 352.0
+offset_top = 1184.0
+offset_right = 715.0
+offset_bottom = 1301.0
+theme = ExtResource("2_6e2rm")
+theme_override_font_sizes/font_size = 80
+text = "00:00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="show_error_time" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="x" type="Button" parent="."]
+offset_left = 1029.0
+offset_top = -19.0
+offset_right = 1070.0
+offset_bottom = 69.0
+theme = ExtResource("4_jg0wx")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = ExtResource("5_11txu")
+theme_override_styles/hover_pressed = ExtResource("5_11txu")
+theme_override_styles/hover = ExtResource("5_11txu")
+theme_override_styles/pressed = ExtResource("5_11txu")
+theme_override_styles/normal = ExtResource("5_11txu")
+text = "X"
+
+[connection signal="text_changed" from="classes" to="." method="classes_changed"]
+[connection signal="text_changed" from="time" to="." method="time_changed"]
+[connection signal="pressed" from="x" to="." method="x_pressed"]

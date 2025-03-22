@@ -1,0 +1,118 @@
+[gd_scene load_steps=5 format=3 uid="uid://b27o6ckpujt5d"]
+
+[ext_resource type="Script" uid="uid://d34kb0seac3tl" path="res://menus/logic/main_menu/main_menu.gd" id="1_rqbgu"]
+[ext_resource type="Texture2D" uid="uid://cd2vnvlmti27y" path="res://testIm.svg" id="2_oblsv"]
+[ext_resource type="Theme" uid="uid://djumny6afl4rn" path="res://themes/main_menu/main_menu.tres" id="3_a63lr"]
+[ext_resource type="StyleBox" uid="uid://cdmev0hlrjosf" path="res://themes/exit.tres" id="4_pwbes"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_rqbgu")
+
+[node name="water" type="Sprite2D" parent="."]
+position = Vector2(525, 1148.25)
+scale = Vector2(9.875, 13.2539)
+texture = ExtResource("2_oblsv")
+
+[node name="logo" type="Label" parent="."]
+offset_left = 64.0
+offset_top = 136.0
+offset_right = 1024.0
+offset_bottom = 369.0
+size_flags_horizontal = 8
+theme = ExtResource("3_a63lr")
+text = "Estudy Surfing"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="menu" type="VBoxContainer" parent="."]
+offset_left = 280.0
+offset_top = 576.0
+offset_right = 478.0
+offset_bottom = 1068.0
+scale = Vector2(2.55232, 2.27032)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="quizzie" type="Button" parent="menu"]
+layout_mode = 2
+theme = ExtResource("3_a63lr")
+text = "Quizzie"
+
+[node name="flash_cards" type="Button" parent="menu"]
+layout_mode = 2
+theme = ExtResource("3_a63lr")
+text = "Flash Cards
+"
+
+[node name="notes" type="Button" parent="menu"]
+layout_mode = 2
+theme = ExtResource("3_a63lr")
+text = "Notes"
+
+[node name="study_time" type="Button" parent="menu"]
+layout_mode = 2
+theme = ExtResource("3_a63lr")
+text = "Study Time"
+
+[node name="surf_net" type="Button" parent="menu"]
+layout_mode = 2
+theme = ExtResource("3_a63lr")
+text = "Surf.Net"
+
+[node name="timer" type="Button" parent="menu"]
+layout_mode = 2
+theme = ExtResource("3_a63lr")
+text = "Timer"
+
+[node name="planner" type="Button" parent="menu"]
+layout_mode = 2
+theme = ExtResource("3_a63lr")
+text = "Planner"
+
+[node name="groups" type="Button" parent="menu"]
+layout_mode = 2
+theme = ExtResource("3_a63lr")
+text = "Groups"
+
+[node name="settings" type="Button" parent="."]
+offset_right = 198.0
+offset_bottom = 58.0
+scale = Vector2(1.52566, 1.73613)
+theme = ExtResource("3_a63lr")
+text = "Settings"
+
+[node name="exit" type="Button" parent="."]
+offset_left = 776.0
+offset_right = 974.0
+offset_bottom = 58.0
+scale = Vector2(1.52566, 1.73613)
+theme = ExtResource("3_a63lr")
+text = "Exit"
+
+[node name="login_signup" type="Button" parent="."]
+offset_left = 2.0
+offset_top = 1808.0
+offset_right = 231.0
+offset_bottom = 1866.0
+scale = Vector2(1.45101, 1.93325)
+theme = ExtResource("3_a63lr")
+text = "Login/Sign Up"
+
+[node name="x" type="Button" parent="."]
+visible = false
+offset_left = 920.0
+offset_top = -32.0
+offset_right = 1118.0
+offset_bottom = 56.0
+scale = Vector2(1.02485, 1.69929)
+theme = ExtResource("3_a63lr")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = ExtResource("4_pwbes")
+theme_override_styles/hover_pressed = ExtResource("4_pwbes")
+theme_override_styles/hover = ExtResource("4_pwbes")
+theme_override_styles/pressed = ExtResource("4_pwbes")
+theme_override_styles/normal = ExtResource("4_pwbes")
+text = "X"
+
+[connection signal="pressed" from="menu/study_time" to="." method="study_time_pressed"]
+[connection signal="pressed" from="exit" to="." method="exit_pressed"]
